@@ -24,7 +24,7 @@ object Main extends App {
   server.start()
 
   while (true) {
-    if (Random.nextInt(50) == 0) {
+    if (Random.nextInt(30) == 0) {
       rabbit.pickRandomDirection()
       sendToAll(Packet.RabbitMove(rabbit.info))
     }

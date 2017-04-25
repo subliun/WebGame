@@ -30,6 +30,8 @@ class Game(screenBounds: Rectangle, socket: WebSocket, clickHandler: ClickHandle
       positionSendTimer.reset()
     }
 
+
+    println("moving rabbit " + rabbit.info.speed)
     rabbit.move(screenBounds)
   }
 
@@ -80,6 +82,7 @@ class Game(screenBounds: Rectangle, socket: WebSocket, clickHandler: ClickHandle
         rabbit.info.position = info.position
         rabbit.info.angle = info.angle
         rabbit.info.angleChange = info.angleChange
+        rabbit.info.image = info.image
 
       case _ =>
         println("invalid packet received" + packet)

@@ -7,7 +7,7 @@ import scala.util.Random
 class Rabbit(var info: RabbitInfo) extends RabbitCommon(info) {
 
   def this() {
-    this(RabbitInfo(Position.Origin, 0, 0, 0, 600))
+    this(RabbitInfo(Position.Origin, 0, 0, speed = 600, 0))
   }
 
   def onCaught(screenBounds: Rectangle): Unit = {
