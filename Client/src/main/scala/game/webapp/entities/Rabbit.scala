@@ -4,9 +4,12 @@ import common.entities.{Position, RabbitCommon, RabbitInfo}
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 
 class Rabbit(var info: RabbitInfo) extends RabbitCommon(info) with Drawable {
-  val image = new Image("vinal.jpeg")
+  var image = (0, new Image("images/vinal0.jpg"))
 
   override def draw(ctx: CanvasRenderingContext2D): Unit = {
-    ctx.drawImage(image.element, info.position.x, info.position.y, info.bounds.width, info.bounds.height)
+    if (image._1 != info.image) {
+      image = (info.image, new Image(s"images/vinal$image.jpg"))
+    }
+    ctx.drawImage(image._2.element, info.position.x, info.position.y, info.bounds.width, info.bounds.height)
   }
 }

@@ -46,3 +46,7 @@ class RabbitCommon(info: RabbitInfo) {
     collidingX && collidingY
   }
 }
+
+object Rabbit {
+  val photoNum = 8
+}

@@ -1,18 +1,23 @@
 package entities
 
-import common.entities.{Position, RabbitCommon, RabbitInfo, Rectangle}
+import common.entities._
 
 import scala.util.Random
 
 class Rabbit(var info: RabbitInfo) extends RabbitCommon(info) {
 
   def this() {
-    this(RabbitInfo(Position.Origin, 0, 0, 600))
+    this(RabbitInfo(Position.Origin, 0, 0, 0, 600))
   }
 
   def onCaught(screenBounds: Rectangle): Unit = {
     pickRandomPosition(screenBounds)
     pickRandomDirection()
+    pickRandomImage()
+  }
+
+  def pickRandomImage(): Unit = {
+    info.image = Random.nextInt(Rabbit.photoNum)
   }
 
   def pickRandomDirection(): Unit = {
