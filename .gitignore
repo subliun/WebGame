@@ -1,0 +1,17 @@
+#ignore idea files
+*.iml
+*.ipr
+*.iws
+.idea
+out
+
+#ignore scala build files
+target/
+lib_managed/
+src_managed/
+project/boot/
+.history
+.cache
+
+#osx stuff
+.DS_Store

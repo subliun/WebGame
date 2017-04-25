@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dots</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <canvas id="game" width="1920" height="1080">
+        ur html is broke
+    </canvas>
+
+    <div id="intro-box" class="outer">
+        <div class="middle">
+            <div class="inner">
+                <h2 id="game-intro">Let's Kill Vinal</h2>
+                <input id="nickname" width="200px" height="200px" class="form-control" placeholder="Enter Name" maxlength="8" autofocus="">
+                <button id="submit-nickname">Join</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./target/scala-2.12/webgame-client-fastopt.js"></script>
+    <script>
+        game.webapp.Main().main();
+    </script>
+</body>
+</html>
